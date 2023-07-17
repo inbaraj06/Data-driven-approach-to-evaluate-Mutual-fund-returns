@@ -1,0 +1,31 @@
+ distribution of min_sip,min_lumpsum by sub_category type
+
+fig, axes = plt.subplots(nrows=5, ncols=2, figsize=(12, 16),sharey='row')
+
+sns.boxplot(equity_df,y='sub_category',x='min_lumpsum',ax=axes[0,0])
+sns.boxplot(hybrid_df,y='sub_category',x='min_lumpsum',ax=axes[1,0])
+sns.boxplot(solution_df,y='sub_category',x='min_lumpsum',ax=axes[2,0])
+sns.boxplot(other_df,y='sub_category',x='min_lumpsum',ax=axes[3,0])
+sns.boxplot(debt_df,y='sub_category',x='min_lumpsum',ax=axes[4,0])
+
+axes[0,0].set_title('Minimum Lumpsum Investment of Equity fund by sub-Category')
+axes[1,0].set_title('Minimum Lumpsum Investment of Hybrid fund by sub-Category')
+axes[2,0].set_title('Minimum Lumpsum Investment of Solution Oriented fund by sub-Category')
+axes[3,0].set_title('Minimum Lumpsum Investment of Other fund by sub-Category')
+axes[4,0].set_title('Minimum Lumpsum Investment of Debt fund by sub-Category')
+
+
+sns.boxplot(equity_df,y='sub_category',x='min_sip',ax=axes[0,1])
+sns.boxplot(hybrid_df,y='sub_category',x='min_sip',ax=axes[1,1])
+sns.boxplot(solution_df,y='sub_category',x='min_sip',ax=axes[2,1])
+sns.boxplot(other_df,y='sub_category',x='min_sip',ax=axes[3,1])
+sns.boxplot(debt_df,y='sub_category',x='min_sip',ax=axes[4,1])
+
+axes[0,1].set_title('Minimum SIP Investment of Equity fund by sub-Category')
+axes[1,1].set_title('Minimum SIP Investment of Hybrid fund by sub-Category')
+axes[2,1].set_title('Minimum SIP Investment of Solution Oriented fund by sub-Category')
+axes[3,1].set_title('Minimum SIP Investment of Other fund by sub-Category')
+axes[4,1].set_title('Minimum SIP Investment of Debt fund by sub-Category')
+
+plt.subplots_adjust(bottom=2.5,top=4,left=2,right=3)
+plt.show()
